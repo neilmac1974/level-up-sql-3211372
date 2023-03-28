@@ -1,8 +1,11 @@
--- This file is intended for notes
--- and for demonstrating how to work
--- with SQLite in Codespaces.
+Select * 
+FROM Customers
+WHERE FirstName = 'Norby';
 
--- These two statements operate on the 
--- restaurant.db SQLite database.
-SELECT * FROM Dishes;
-SELECT * FROM Customers;
+SELECT * 
+FROM Reservations
+WHERE CustomerID ='64'
+ORDER BY Date DESC;
+
+DELETE FROM Reservations
+WHERE ReservationID ='2000';

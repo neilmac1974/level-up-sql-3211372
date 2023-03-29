@@ -1,11 +1,7 @@
-Select * 
-FROM Customers
-WHERE FirstName = 'Norby';
+SELECT Patrons.FirstName, Patrons.Email, Books.Title, Loans.DueDate
+FROM Loans
+JOIN Books on Loans.BookID = Books.BookID
+JOIN Patrons on Loans.PatronID = Patrons.PatronID
+WHERE Loans.DueDate = '2022-07-13'
+AND Loans.ReturnedDate IS NULL
 
-SELECT * 
-FROM Reservations
-WHERE CustomerID ='64'
-ORDER BY Date DESC;
-
-DELETE FROM Reservations
-WHERE ReservationID ='2000';
